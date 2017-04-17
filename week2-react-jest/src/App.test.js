@@ -3,6 +3,10 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import { shallow } from 'enzyme';
 
+//To run this code in linux command
+//npm test
+
+
 //React Jest Suite
 //Jest Create React Tests
 describe('jest test', function () {

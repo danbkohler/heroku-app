@@ -2,12 +2,21 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+//To run this code in localhost:3000
+//npm start
+
 class App extends Component {
     constructor() {
         super();
         this.state = {
             nine: '0',
-            firstName: 'unknown'
+            firstName: 'FirstName',
+            lastName: 'LastName',
+            street: 'Street Address',
+            street2: 'Address 2',
+            city: 'City',
+            usstate: 'State',
+            zip: 'Zip'
         }
     }
 
@@ -19,9 +28,16 @@ class App extends Component {
     };
 
     //Added for unitTestsAddress
+    //This runs when address button clicked
     setAddress = () => {
       this.setState({
-          firstName: 'Patty'
+          firstName: 'Patty',
+          lastName: 'Murray',
+          street: '915 2nd Ave',
+          street2: '#2988',
+          city: 'Seattle',
+          usstate: 'WA',
+          zip: '98174'
       })
     };
 
@@ -36,12 +52,15 @@ class App extends Component {
                 </div>
                 <p className="App-intro">
                     Nine: {this.state.nine}
-                    firstName: {this.state.firstName}
+
                 </p>
+                <p>Name: {this.state.firstName} {this.state.lastName} </p>
+                <p>Address Line 1: {this.state.street}</p>
+                <p>Address Line 2: {this.state.street2}</p>
+                <p>City/State/Zip: {this.state.city} {this.state.usstate} {this.state.zip}</p>
 
                 <button className='elf' onClick={this.getNine}>Get Nine</button>
-                <button className="setAddress" onClick={this.setAddress}>Set Address</button>button>
-
+                <button className="setAddress" onClick={this.setAddress}>Set Address</button>
             </div>
         );
     }
