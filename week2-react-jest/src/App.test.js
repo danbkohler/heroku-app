@@ -5,6 +5,7 @@ import { shallow } from 'enzyme';
 
 //To run this code in linux command
 //npm test
+// Ctrl + C to end program
 
 
 //React Jest Suite
