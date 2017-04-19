@@ -1,16 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
-import Address from './Address';
 import './index.css';
-
-//Alt C + R to reformat code alignment
-
+import Work from './work';
 
 ReactDOM.render(
-  <div>
-    <App />,
-    <Address/>
-  </div>,
+    <div>
+        <App />,
+        <Work />
+    </div>,
   document.getElementById('root')
 );
