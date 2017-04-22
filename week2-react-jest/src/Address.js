@@ -45,7 +45,7 @@ class Address extends Component{
 
 //This was from Week 3 Class 1
 
-class Address extends Component {
+class Address1 extends Component {
     constructor() {
         super();
         this.state = {
@@ -92,4 +92,4 @@ class Address extends Component {
 
 }//end class
 
-export default Address
+export default Address1
