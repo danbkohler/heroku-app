@@ -3,8 +3,16 @@ import logo from './logo.svg';
 import './App.css';
 
 //To run this code in localhost:3000
+//first time on new client ONLY: npm install
 //npm start
 // Ctrl + C to end program
+
+//git status
+//git add .
+//git commit -m "comment"
+//git push
+
+
 
 class App extends Component {
     constructor() {

@@ -5,6 +5,8 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+//Changes for Week 3 assignment??
+/*
 class Address extends Component{
     constructor (props) {
         super(props);
@@ -39,9 +41,10 @@ class Address extends Component{
         );
 
 }
+*/
 
 //This was from Week 3 Class 1
-/*
+
 class Address extends Component {
     constructor() {
         super();
@@ -88,5 +91,5 @@ class Address extends Component {
 
 
 }//end class
-*/
+
 export default Address
