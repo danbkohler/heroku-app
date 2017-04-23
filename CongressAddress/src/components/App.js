@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import logo from '../images/logo.svg';
+import '../css/App.css';
 
 //To run this code in localhost:3000
 //first time on new client ONLY: npm install

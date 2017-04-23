@@ -2,7 +2,7 @@
  * Created by bcuser on 4/22/17.
  */
 import React, { Component } from 'react';
-import logo from '../logo.svg';
+import logo from '../images/logo.svg';
 
 
 //Address Component Assignment 1
