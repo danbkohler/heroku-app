@@ -18,7 +18,7 @@ class Address extends Component {
             lastName: address.lastName,
             street: address.street,
             city: address.city,
-            usState: address.state,
+            usState: address.usState,
             zip: address.zip,
             phone: address.phone,
             website: address.website
@@ -33,7 +33,7 @@ class Address extends Component {
             lastName: address.lastName,
             street: address.street,
             city: address.city,
-            usState: address.state,
+            usState: address.usState,
             zip: address.zip,
             phone: address.phone,
             website: address.website

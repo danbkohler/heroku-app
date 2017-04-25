@@ -39,9 +39,7 @@ class App extends Component {
                     <img src={logo} className="App-logo" alt="logo"/>
                     <h2>Welcome to PROG 272</h2>
                 </div>
-                <p className="App-intro">
-                    Nine: {this.state.nine}
-                </p>
+                <p className="App-intro">Nine: {this.state.nine}</p>
                 <button className='elf' onClick={this.getNine}>Get Nine</button>
             </div>
         );

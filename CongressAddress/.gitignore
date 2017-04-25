@@ -16,3 +16,13 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
+# Manual additions to ignore: http://www.ccalvert.net/books/CloudNotes/Assignments/GitNewRepo.html#gitignore
+node_modules
+bower_components
+.metadata
+.idea
+.c9
+platforms
+Thumbs.db
+*.zip
+npm-debug.log
