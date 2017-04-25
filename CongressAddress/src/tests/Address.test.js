@@ -14,21 +14,30 @@ describe('Address Test', function () {
         ReactDOM.render(<Address addressList={addresses} />, div);
     });
 
+    it('displays the Set Address button', () => {
+        const wrapper = shallow(<Address addressList={addresses} />);
+        const innerNode = wrapper.find('.setAddress');
+        expect(innerNode.length).toEqual(1);
+    });
+
+    it('displays the default App-logo', () => {
+        const wrapper = shallow(<Address addressList={addresses} />);
+        const innerNode = wrapper.find('.App-logo');
+        expect(innerNode.length).toEqual(1);
+    });
+
     it('renders and displays the default full name', () => {
         const wrapper = shallow(<Address addressList={addresses} />);
-        //const welcome = <p className="App-intro">firstName: unknown</p>;
         //const firstName = wrapper.find('p').last().debug();
-        //console.log(firstName);
-        //expect(wrapper.contains(welcome)).toEqual(true);
         const fullName = <p>Name: unknown unknown </p>;
         expect(wrapper.contains(fullName)).toEqual(true);
     });
 
+    //What is syntax to test for a variable value instead of literal string using contains?
     it('renders and displays the updated full name', () => {
         const wrapper = shallow(<Address addressList={addresses} />);
         //Simulate a click here
         wrapper.find('button').simulate('click');
-        //Method “props” is only meant to be run on a single node. 0 found instead.
         const fullName = <p>Name: Patty Murray </p>;
         expect(wrapper.contains(fullName)).toEqual(true);
     });
@@ -70,12 +79,33 @@ describe('Address Test', function () {
 
     it('Displays updated phone number', () => {
         const wrapper = shallow(<Address addressList={addresses} />);
-        wrapper.find('button').simulate('click')
+        wrapper.find('button').simulate('click');
         const phone = <p>Phone: (206)553-5545</p>;
         expect(wrapper.contains(phone)).toEqual(true);
     });
 
+    it('Displays default city/state/zip?', () => {
+        const wrapper = shallow(<Address addressList={addresses} />);
+        const phone = <p>City/State/Zip: unknown unknown unknown</p>;
+        expect(wrapper.contains(phone)).toEqual(true);
+    });
 
+    it('Displays updated city/state/zip', () => {
+        const wrapper = shallow(<Address addressList={addresses} />);
+        wrapper.find('button').simulate('click');
+        const phone = <p>City/State/Zip: Seattle WA 98174</p>;
+        expect(wrapper.contains(phone)).toEqual(true);
+    });
 
+    it('renders and reads H2 text', () => {
+        const wrapper = shallow(<Address addressList={addresses} />);
+        const welcome = <h2>Welcome to Prog 272</h2>;
+        expect(wrapper.contains(welcome)).toEqual(true);
+    });
+
+    it('see if true is true', () => {
+        expect(true).toBe(true);
+    });
+    //Test case #15 in this file...
 
 });
