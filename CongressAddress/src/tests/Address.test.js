@@ -14,6 +14,8 @@ describe('Address Test', function () {
         ReactDOM.render(<Address addressList={addresses} />, div);
     });
 
+    //Tests fail with changes from 5/01 (implementing AddressEdit)
+
     it('displays the Set Address button', () => {
         const wrapper = shallow(<Address addressList={addresses} />);
         const innerNode = wrapper.find('.setAddress');

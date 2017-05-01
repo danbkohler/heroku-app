@@ -4,6 +4,7 @@
 import React, { Component } from 'react';
 import addresses from '../address-list';
 import AddressShow from './AddressShow';
+import AddressEdit from './AddressEdit';
 
 
 class Address extends Component {
@@ -28,7 +29,45 @@ class Address extends Component {
         })
     };
 
+    //Adding on 5/01 for ReactAddressEdit
+    onNameChange = (event) => {
+        //this.log("ON NAME CHANGE");
+        const address = addresses[this.addressIndex];
+        switch (event.target.id) {
+            case 'changeFirstName':
+                address.firstName = event.target.value;
+                break;
+            case 'changeLastName':
+                address.lastName = event.target.value;
+                break;
+            case 'changeStreet':
+                address.street = event.target.value;
+                break;
+            case 'changeCity':
+                address.city = event.target.value;
+                break;
+            case 'changeState':
+                address.usState = event.target.value;
+                break;
+            case 'changeZip':
+                address.zip = event.target.value;
+                break;
+            case 'changePhone':
+                address.phone = event.target.value;
+                break;
+            case 'changeWebsite':
+                address.website = event.target.value;
+                break;
+            default:
+                throw new Error('Bad case in Address onNameChange');
+        }
+        this.setState({
+            address: address
+        })
+    };
 
+    //Render method that doesn't use AddressEdit:
+    /*
     render() {
         if (!this.quiet) {console.log("ADDRESS RENDER"); }
         return (
@@ -40,6 +79,26 @@ class Address extends Component {
             </div>
         );
     }
+    */
+
+    //New render method from 5/01/17
+    render() {
+        if (!this.quiet) {console.log("ADDRESS RENDER"); }
+        return (
+            <div className="App">
+                <AddressEdit
+                    address={this.state.address}
+                    onAddressChange={this.onAddressChange}
+                    onNameChange={this.onNameChange}
+                />
+                <AddressShow
+                    address={this.state.address}
+                    onAddressChange={this.onAddressChange}
+                />
+            </div>
+        );
+    }
+
 
 }//end of class Address
 
