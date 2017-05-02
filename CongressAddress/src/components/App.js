@@ -13,6 +13,8 @@ import '../css/App.css';
 //git push
 
 
+//You'll want to change this to SmallNumbers.js
+
 
 class App extends Component {
     constructor() {

@@ -66,6 +66,21 @@ class Address extends Component {
         })
     };
 
+    //TODO: Rename to ElfAddress to avoid collisions
+    //New render for ReactAddressMenu
+    render() {
+        if (!this.quiet) { console.log("ADDRESS RENDER"); }
+        return (
+
+            <div className="App">
+                <AddressShow
+                    address={this.state.address}
+                    onAddressChange={this.onAddressChange}
+                />
+            </div>
+        );
+    }
+
     //Render method that doesn't use AddressEdit:
     /*
     render() {
@@ -82,8 +97,8 @@ class Address extends Component {
     */
 
     //New render method from 5/01/17
+    /*
     render() {
-        if (!this.quiet) {console.log("ADDRESS RENDER"); }
         return (
             <div className="App">
                 <AddressEdit
@@ -98,6 +113,7 @@ class Address extends Component {
             </div>
         );
     }
+    */
 
 
 }//end of class Address
