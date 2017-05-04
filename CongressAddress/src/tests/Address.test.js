@@ -3,7 +3,7 @@
  */
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Address from '../components/Address';
+import Address from '../components/ElfAddress';
 import { shallow } from 'enzyme';
 import addresses from '../address-list';
 

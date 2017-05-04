@@ -66,7 +66,7 @@ class Address extends Component {
         })
     };
 
-    //TODO: Rename to ElfAddress to avoid collisions
+    //Renamed to ElfAddress to avoid collisions DONE!
     //New render for ReactAddressMenu
     render() {
         if (!this.quiet) { console.log("ADDRESS RENDER"); }
