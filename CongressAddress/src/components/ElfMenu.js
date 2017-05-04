@@ -4,8 +4,9 @@
 import React, {Component} from 'react';
 import ElfAddress from './ElfAddress';
 import AddressChanger from './AddressChanger';
-//import SmallNumbers from './SmallNumbers';
+import SmallNumbers from './SmallNumbers';
 import App from './SmallNumbers';
+import AddressShow from './AddressShow';
 import {
     BrowserRouter as Router,
     Route,
@@ -26,8 +27,7 @@ class ElfMenu extends Component {
                             <li><Link to="/small">SmallNumbers</Link></li>
                         </ul>
                     </div>
-                    <li><a href="/edit">AddressEdit</a></li>
-                    <Route exact path="/" component={AddressEdit}/>
+                    <Route exact path="/" component={AddressShow}/>
                     <Route path="/edit" component={AddressChanger}/>
                 </div>
             </Router>
