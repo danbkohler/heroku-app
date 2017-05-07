@@ -3,7 +3,6 @@
  */
 import React, { Component } from 'react';
 import addresses from '../address-list';
-import AddressShow from './AddressShow';
 import AddressEdit from './AddressEdit';
 import Address from './ElfAddress';
 

@@ -4,7 +4,6 @@
 import React, { Component } from 'react';
 import addresses from '../address-list';
 import AddressShow from './AddressShow';
-import AddressEdit from './AddressEdit';
 
 
 class Address extends Component {
@@ -66,6 +65,7 @@ class Address extends Component {
         })
     };
 
+
     //Renamed to ElfAddress to avoid collisions DONE!
     //New render for ReactAddressMenu
     render() {
@@ -117,9 +117,6 @@ class Address extends Component {
 
 
 }//end of class Address
-
-
-
 
 
 //OLDER VERSION THAT WORKS BUT DOESN'T USE AddressShow.js:

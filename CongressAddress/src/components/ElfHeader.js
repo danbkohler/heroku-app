@@ -2,7 +2,7 @@
  * Created by bcuser on 5/7/17.
  */
 import React, {Component} from 'react';
-import blooming from '../images/blooming.svg';
+import flowerCircles from '../images/flowerCircles.svg';
 
 
 class ElfHeader extends Component {
@@ -13,7 +13,7 @@ class ElfHeader extends Component {
             <div className="App">
 
                 <div className="App-header">
-                    <img src={blooming} className="App-logo" alt="logo"/>
+                    <img src={flowerCircles} className="App-logo" alt="logo"/>
                     <h2>Welcome to Prog272</h2>
                 </div>
 

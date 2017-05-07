@@ -4,9 +4,7 @@
 import React, {Component} from 'react';
 import ElfAddress from './ElfAddress';
 import AddressChanger from './AddressChanger';
-import SmallNumbers from './SmallNumbers';
 import App from './SmallNumbers';
-import AddressShow from './AddressShow';
 import {
     BrowserRouter as Router,
     Route,

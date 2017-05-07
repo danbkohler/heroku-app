@@ -19,6 +19,24 @@ class AddressShow extends Component {
         }
     }
 
+    //Cleaning up render
+    render() {
+        this.log("SHOW ADDRESS RENDER");
+
+        return (
+            <div className="App">
+                <p>Name: {this.props.address.firstName} {this.props.address.lastName} </p>
+                <p>Address: {this.props.address.street}</p>
+                <p>City/State/Zip: {this.props.address.city} {this.props.address.usState} {this.props.address.zip}</p>
+                <p>Phone: {this.props.address.phone}</p>
+                <p>Website: {this.props.address.website}</p>
+
+                <button id="showAddressClick" onClick={this.props.onAddressChange}>Show Address</button>
+            </div>
+        );
+    }
+
+    /*
     render() {
         this.log("SHOW ADDRESS RENDER");
 
@@ -38,6 +56,7 @@ class AddressShow extends Component {
             </div>
         );
     }
+    */
 
     //Will get rid of button clicks?
 

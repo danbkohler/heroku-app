@@ -31,9 +31,19 @@ class App extends Component {
         })
     };
 
+    //Cleaning up render
+    render() {
+        return (
+            <div className="App">
+                <p className="App-intro">Nine: {this.state.nine}</p>
+                <button className='elf' onClick={this.getNine}>Get Nine</button>
+            </div>
+        );
+    }
 
     //Comment out Nine: {this.state.nine}?
     //and <button className='elf' onClick={this.getNine}>Get Nine</button>?
+    /*
     render() {
         return (
             <div className="App">
@@ -46,6 +56,7 @@ class App extends Component {
             </div>
         );
     }
+    */
 }
 
 export default App;
