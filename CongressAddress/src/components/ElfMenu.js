@@ -13,7 +13,7 @@ import {
 import '../css/App.css';
 
 //Note: ElfAddress imports AddressShow
-//Should path for /small be App or SmallNumbers?
+//Should path for /small be App or SmallNumbers?  App because class is what matters
 class ElfMenu extends Component {
 
     render() {
