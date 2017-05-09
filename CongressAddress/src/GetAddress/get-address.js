@@ -6,6 +6,8 @@ var debug = require('debug')('get-address');
 
 debug('Testing debug');
 
+//node get-address.js
+
 function readFile(fileName, callback) {
     'use strict';
     if (!callback) {
@@ -35,14 +37,16 @@ function getAddress(value, char) {
     'use strict';
     return value.substring(0, value.lastIndexOf(char) -1);
 }
+//lastIndexOf(char) has char set to W in the readfile,
+//So it stops reading address once you get to "W" for Washington
 
 function getZip(value, char) {
     'use strict';
     // YOU WRITE IT
     // ITS THE SAME SINGLE CALL AS GET ADDRESS, BUT INDEXES ARE DIFFERENT
-    // UNCOMMENT NEXT LINE AND MODIFY IT
-    // return value.substring(WHAT GOES HERE?, WHAT GOES HERE?);
+    return value.substring(value.length - 10);
 }
+//Address.json uses 10 char zips, all at end of address line
 
 function getCity(value, char, len) {
     'use strict';
@@ -65,8 +69,16 @@ readFile('address.json').then(function(text) {
         console.log('{');
         writeIt('firstName:', json.objects[i].person.firstname);
         // GET LAST NAME
+        //DK Adding lastName writeIt
+        writeIt('lastName:', json.objects[i].person.lastname);
         writeIt('street:', getAddress(json.objects[i].extra.address, 'W'));
         // CITY STATE ZIP PHONE WEBSITE
+        //DK Adding City WiP (currently shows wrong info)
+        writeIt('city:', getCity(json.objects[i].extra.address, 'W'));
+        writeIt('state:', json.objects[i].state);
+        writeIt('zip:', getZip(json.objects[i].extra.address, 'C'));
+        writeIt('phone:', json.objects[i].phone);
+        writeIt('website:', json.objects[i].website);
         writeIt('email:', '');
         writeIt('contact:', json.objects[i].extra.contact_form || '', true);
         console.log('},');
