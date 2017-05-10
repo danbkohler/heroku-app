@@ -1,0 +1,10 @@
+.AddressEditDiv input {
+    text-align: left;
+    color: darkslategrey;
+    background-color: aliceblue;
+}
+
+.AddressEditDiv button {
+    display: block;
+    margin: 0 auto;
+}

@@ -3,6 +3,7 @@
  */
 import React, { Component } from 'react';
 import logo from '../images/logo.svg';
+import '../css/AddressEdit.css';
 
 
 class AddressEdit extends Component {
@@ -17,7 +18,7 @@ class AddressEdit extends Component {
         //this.log("SHOW ADDRESS RENDER");
 
         return (
-            <div className="App">
+            <div className="AddressEditDiv">
                 <input id="changeFirstName" value={this.props.address.firstName} onChange={this.props.onNameChange}/>
                 <input id="changeLastName" value={this.props.address.lastName} onChange={this.props.onNameChange}/>
                 <br />

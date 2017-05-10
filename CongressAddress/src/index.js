@@ -7,7 +7,7 @@ import './css/index.css';
 
 ReactDOM.render(
   <div>
-    <ElfHeader />,
+    <ElfHeader />
     <ElfMenu />
   </div>,
   document.getElementById('root')

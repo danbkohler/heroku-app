@@ -10,7 +10,7 @@ import {
     Route,
     Link
 } from 'react-router-dom'
-import '../css/App.css';
+import '../css/ElfMenu.css';
 
 //Note: ElfAddress imports AddressShow
 //Should path for /small be App or SmallNumbers?  App because class is what matters
@@ -20,7 +20,7 @@ class ElfMenu extends Component {
         return (
             <Router>
                 <div>
-                    <div className="App">
+                    <div className="ElfMenuDiv">
                         <ul>
                             <li><Link to="/">AddressShow</Link></li>
                             <li><Link to="/edit">AddressEdit</Link></li>

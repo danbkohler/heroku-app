@@ -1,0 +1,14 @@
+.AddressShowDiv {
+    color: green;
+    background-color: beige;
+}
+/* Remember, more specific style rules take precedence */
+.AddressShowDiv p {
+    color: deepskyblue;
+    text-align: left;
+    margin-left: 20%;
+
+}
+
+/* Note: Careful with selectors, they're combined and used with CSS */
+/* Will update identical class names across files as-needed */

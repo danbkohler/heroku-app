@@ -3,6 +3,7 @@
  */
 import React, { Component } from 'react';
 import logo from '../images/logo.svg';
+import '../css/AddressShow.css';
 
 
 class AddressShow extends Component {
@@ -24,7 +25,7 @@ class AddressShow extends Component {
         this.log("SHOW ADDRESS RENDER");
 
         return (
-            <div className="App">
+            <div className="AddressShowDiv">
                 <p>Name: {this.props.address.firstName} {this.props.address.lastName} </p>
                 <p>Address: {this.props.address.street}</p>
                 <p>City/State/Zip: {this.props.address.city} {this.props.address.usState} {this.props.address.zip}</p>

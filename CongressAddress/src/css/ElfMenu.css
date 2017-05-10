@@ -1,0 +1,9 @@
+.ElfMenuDiv {
+    background-color: aliceblue;
+}
+
+.ElfMenuDiv li {
+    text-align: center;
+    padding-bottom: 5px;
+    font-weight: 300;
+}
