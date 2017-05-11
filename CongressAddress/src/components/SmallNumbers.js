@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from '../images/logo.svg';
 import '../css/App.css';
 
 //To run this code in localhost:3000
@@ -38,22 +37,6 @@ class App extends Component {
         );
     }
 
-    //Comment out Nine: {this.state.nine}?
-    //and <button className='elf' onClick={this.getNine}>Get Nine</button>?
-    /*
-    render() {
-        return (
-            <div className="App">
-                <div className="App-header">
-                    <img src={logo} className="App-logo" alt="logo"/>
-                    <h2>Welcome to PROG 272</h2>
-                </div>
-                <p className="App-intro">Nine: {this.state.nine}</p>
-                <button className='elf' onClick={this.getNine}>Get Nine</button>
-            </div>
-        );
-    }
-    */
 }
 
 export default App;

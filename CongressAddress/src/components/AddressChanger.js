@@ -6,7 +6,8 @@ import addresses from '../address-list';
 import AddressEdit from './AddressEdit';
 import Address from './ElfAddress';
 
-
+//Since I extend Address instead of Component here I get a warning that it's unused,
+//but React is out of scope if I comment the line out, so I'm leaving as-is for now.
 class AddressChanger extends Address {
     constructor(props) {
         super(props);
@@ -73,6 +74,5 @@ class AddressChanger extends Address {
 
 
 }//end of class AddressChanger
-
 
 export default AddressChanger;

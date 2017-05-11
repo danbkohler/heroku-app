@@ -2,9 +2,7 @@
  * Created by bcuser on 4/26/17.
  */
 import React, { Component } from 'react';
-import logo from '../images/logo.svg';
 import '../css/AddressEdit.css';
-
 
 class AddressEdit extends Component {
     constructor(props) {
@@ -36,8 +34,6 @@ class AddressEdit extends Component {
         );
     }
 
-
-//Copypasta of AddressShow w/changes
 }//end of class AddressEdit
 
 export default AddressEdit;

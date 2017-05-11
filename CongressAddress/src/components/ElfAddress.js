@@ -80,8 +80,6 @@ class Address extends Component {
         })
     };
 
-
-    //Renamed to ElfAddress to avoid collisions DONE!
     //New render for ReactAddressMenu
     render() {
         if (!this.quiet) { console.log("ADDRESS RENDER"); }
@@ -97,99 +95,7 @@ class Address extends Component {
         );
     }
 
-    //Render method that doesn't use AddressEdit:
-    /*
-    render() {
-        if (!this.quiet) {console.log("ADDRESS RENDER"); }
-        return (
-            <div className="App">
-                <AddressShow
-                    address={this.state.address}
-                    onAddressChange={this.onAddressChange}
-                />
-            </div>
-        );
-    }
-    */
-
-    //New render method from 5/01/17
-    /*
-    render() {
-        return (
-            <div className="App">
-                <AddressEdit
-                    address={this.state.address}
-                    onAddressChange={this.onAddressChange}
-                    onNameChange={this.onNameChange}
-                />
-                <AddressShow
-                    address={this.state.address}
-                    onAddressChange={this.onAddressChange}
-                />
-            </div>
-        );
-    }
-    */
-
 
 }//end of class Address
 
-
-//OLDER VERSION THAT WORKS BUT DOESN'T USE AddressShow.js:
-/*
- //Address Component Assignment 1
-
- class Address extends Component {
- constructor(props) {
- super(props);
-
- console.log('ADDRESS PROPS', typeof this.props);
- const address = this.props.addressList[0];
- this.state = {
- firstName: address.firstName,
- lastName: address.lastName,
- street: address.street,
- city: address.city,
- usState: address.usState,
- zip: address.zip,
- phone: address.phone,
- website: address.website
- }
- }
-
- setAddress = () => {
- const address = this.props.addressList[1]
-
- this.setState({
- firstName: address.firstName,
- lastName: address.lastName,
- street: address.street,
- city: address.city,
- usState: address.usState,
- zip: address.zip,
- phone: address.phone,
- website: address.website
- })
- };
-
-
- render() {
- return (
- <div className="App">
- <div className="App-header">
- <img src={logo} className="App-logo" alt="logo"/>
- <h2>Welcome to Prog 272</h2>
- </div>
- <p>Name: {this.state.firstName} {this.state.lastName} </p>
- <p>Address: {this.state.street}</p>
- <p>City/State/Zip: {this.state.city} {this.state.usState} {this.state.zip}</p>
- <p>Phone: {this.state.phone}</p>
- <p>Website: {this.state.website}</p>
-
- <button className="setAddress" onClick={this.setAddress}>Set Address</button>
- </div>
- );
- }
- }//end of class Address
- */
 export default Address;
