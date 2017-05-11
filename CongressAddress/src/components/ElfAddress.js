@@ -19,6 +19,7 @@ class Address extends Component {
         this.quiet = true;
     }
 
+    //Was [onAddressChange = (event) =>] before JSCS
     onAddressChange = (event) => {
         if(this.addressIndex < addresses.length - 1)
         {

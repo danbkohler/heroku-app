@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import '../css/App.css';
 
+//Why am I getting "jscs expected end of node list but punctuator found ()" on line 1?
+
 //To run this code in localhost:3000
 //first time on new client ONLY: npm install
 //npm start
@@ -10,7 +12,6 @@ import '../css/App.css';
 //git add .
 //git commit -m "comment"
 //git push
-
 
 class App extends Component {
     constructor() {
@@ -30,8 +31,8 @@ class App extends Component {
     //Cleaning up render
     render() {
         return (
-            <div className="App">
-                <p className="App-intro">Nine: {this.state.nine}</p>
+            <div className='App'>
+                <p className='App-intro'>Nine: {this.state.nine}</p>
                 <button className='elf' onClick={this.getNine}>Get Nine</button>
             </div>
         );
