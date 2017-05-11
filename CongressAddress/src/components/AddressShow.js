@@ -2,7 +2,7 @@
  * Created by bcuser on 4/26/17.
  */
 import React, { Component } from 'react';
-import logo from '../images/logo.svg';
+//import logo from '../images/logo.svg';
 import '../css/AddressShow.css';
 
 
@@ -32,7 +32,8 @@ class AddressShow extends Component {
                 <p>Phone: {this.props.address.phone}</p>
                 <p>Website: {this.props.address.website}</p>
 
-                <button id="showAddressClick" onClick={this.props.onAddressChange}>Show Address</button>
+                <button id="showAddressClick" onClick={this.props.onAddressChange}>Show Next Address</button>
+                <button id="showAddressClickBack" onClick={this.props.onAddressChangeReverse}>Show Prior Address</button>
             </div>
         );
     }

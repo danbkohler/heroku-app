@@ -20,7 +20,22 @@ class Address extends Component {
     }
 
     onAddressChange = (event) => {
-        this.addressIndex = 1;
+        if(this.addressIndex < addresses.length - 1)
+        {
+            this.addressIndex += 1;
+        }
+        const address = addresses[this.addressIndex];
+
+        this.setState({
+            address: address
+        })
+    };
+
+    onAddressChangeReverse = (event) => {
+        if (this.addressIndex > 0)
+        {
+            this.addressIndex -= 1;
+        }
         const address = addresses[this.addressIndex];
 
         this.setState({
@@ -76,6 +91,7 @@ class Address extends Component {
                 <AddressShow
                     address={this.state.address}
                     onAddressChange={this.onAddressChange}
+                    onAddressChangeReverse={this.onAddressChangeReverse}
                 />
             </div>
         );

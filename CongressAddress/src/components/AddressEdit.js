@@ -29,7 +29,9 @@ class AddressEdit extends Component {
                 <input id="changePhone" value={this.props.address.phone} onChange={this.props.onNameChange}/><br />
                 <input id="changeWebsite" value={this.props.address.website} onChange={this.props.onNameChange}/>
                 <br />
-                <button id="showAddressClick" onClick={this.props.onAddressChange}>Show Address</button>
+                <button id="showAddressClick" onClick={this.props.onAddressChange}>Edit Next Address</button>
+                <button id="showAddressClickBack" onClick={this.props.onAddressChangeReverse}>Edit Prior Address</button>
+
             </div>
         );
     }

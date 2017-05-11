@@ -64,6 +64,7 @@ class AddressChanger extends Address {
                 <AddressEdit
                     address={this.state.address}
                     onAddressChange={this.onAddressChange}
+                    onAddressChangeReverse={this.onAddressChangeReverse}
                     onNameChange={this.onNameChange}
                 />
             </div>
