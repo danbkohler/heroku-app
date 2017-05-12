@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eb3dc09d-d870-42a3-a995-04d35538ed89" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/AddressShow.js" afterPath="$PROJECT_DIR$/src/components/AddressShow.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/ElfAddress.js" afterPath="$PROJECT_DIR$/src/components/ElfAddress.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/SmallNumbers.js" afterPath="$PROJECT_DIR$/src/components/SmallNumbers.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -30,11 +30,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ElfAddress.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ElfAddress.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/ElfAddress.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-304">
-              <caret line="45" column="28" lean-forward="true" selection-start-line="45" selection-start-column="28" selection-end-line="45" selection-end-column="28" />
+            <state relative-caret-position="-846">
+              <caret line="10" column="89" lean-forward="false" selection-start-line="10" selection-start-column="89" selection-end-line="10" selection-end-column="89" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
                 <element signature="e#41#82#0" expanded="true" />
@@ -46,8 +46,8 @@
       <file leaf-file-name="AddressShow.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/AddressShow.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="486">
-              <caret line="27" column="18" lean-forward="false" selection-start-line="27" selection-start-column="18" selection-end-line="27" selection-end-column="18" />
+            <state relative-caret-position="90">
+              <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
                 <element signature="e#41#82#0" expanded="true" />
@@ -56,14 +56,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AddressShow.test.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="AddressShow.test.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/tests/AddressShow.test.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="720">
-              <caret line="42" column="45" lean-forward="true" selection-start-line="42" selection-start-column="45" selection-end-line="42" selection-end-column="45" />
-              <folding>
-                <element signature="e#41#67#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="90">
+              <caret line="7" column="22" lean-forward="false" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -122,10 +120,10 @@
         <option value="$PROJECT_DIR$/src/components/ElfMenu.js" />
         <option value="$PROJECT_DIR$/src/tests/App.test.js" />
         <option value="$PROJECT_DIR$/src/tests/SmallNumbers.test.js" />
-        <option value="$PROJECT_DIR$/src/components/AddressShow.js" />
         <option value="$PROJECT_DIR$/src/tests/AddressShow.test.js" />
         <option value="$PROJECT_DIR$/src/tests/Address.test.js" />
         <option value="$PROJECT_DIR$/src/components/SmallNumbers.js" />
+        <option value="$PROJECT_DIR$/src/components/AddressShow.js" />
         <option value="$PROJECT_DIR$/src/components/ElfAddress.js" />
       </list>
     </option>
@@ -413,12 +411,12 @@
       <workItem from="1494284153365" duration="4550000" />
       <workItem from="1494453950519" duration="7535000" />
       <workItem from="1494534524418" duration="3174000" />
-      <workItem from="1494621011161" duration="8066000" />
+      <workItem from="1494621011161" duration="9099000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="77649000" />
+    <option name="totallyTimeSpent" value="78682000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="3" y="9" width="1501" height="1019" extended-state="0" />
@@ -848,6 +846,25 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/tests/AddressShow.test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="7" column="22" lean-forward="false" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/AddressShow.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#41#82#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/SmallNumbers.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="234">
@@ -860,32 +877,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/ElfAddress.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-304">
-          <caret line="45" column="28" lean-forward="true" selection-start-line="45" selection-start-column="28" selection-end-line="45" selection-end-column="28" />
+        <state relative-caret-position="-846">
+          <caret line="10" column="89" lean-forward="false" selection-start-line="10" selection-start-column="89" selection-end-line="10" selection-end-column="89" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="e#41#82#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/AddressShow.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="27" column="18" lean-forward="false" selection-start-line="27" selection-start-column="18" selection-end-line="27" selection-end-column="18" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="e#41#82#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/tests/AddressShow.test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="720">
-          <caret line="42" column="45" lean-forward="true" selection-start-line="42" selection-start-column="45" selection-end-line="42" selection-end-column="45" />
-          <folding>
-            <element signature="e#41#67#0" expanded="true" />
           </folding>
         </state>
       </provider>

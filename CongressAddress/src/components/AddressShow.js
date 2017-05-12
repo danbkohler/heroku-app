@@ -32,6 +32,7 @@ class AddressShow extends Component {
 
                 <button id='showAddressClick' onClick={this.props.onAddressChange}>Show Next Address</button>
                 <button id='showAddressClickBack' onClick={this.props.onAddressChangeReverse}>Show Prior Address</button>
+                <button id='firstLastToggle' onClick={this.props.firstLastToggle}>Go to Last/First Address</button>
             </div>
         );
     }

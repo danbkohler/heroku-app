@@ -8,10 +8,11 @@ import AddressShow from './AddressShow';
 class Address extends Component {
     constructor(props) {
         super(props);
-        //Adding due to change in onAddressChange declaration syntax
+        //Adding due to change in onAddressChange declaration syntax, for JSCS compliance
         this.onAddressChange = this.onAddressChange.bind(this);
         this.onAddressChangeReverse = this.onAddressChangeReverse.bind(this);
         this.onNameChange = this.onNameChange.bind(this);
+        this.firstLastToggle = this.firstLastToggle.bind(this);
 
         this.addressIndex = 0;
         const address = addresses[this.addressIndex];
@@ -22,7 +23,6 @@ class Address extends Component {
     }
 
     //Was [onAddressChange = (event) =>] before JSCS
-    //Not sure why this change was necessary as JSCS doesn't seem to take issue with it
     onAddressChange(event) {
 
         if (this.addressIndex < addresses.length - 1) {
@@ -39,6 +39,21 @@ class Address extends Component {
     onAddressChangeReverse(event) {
         if (this.addressIndex > 0) {
             this.addressIndex -= 1;
+        }
+        const address = addresses[this.addressIndex];
+
+        this.setState({
+            address: address
+        });
+    };
+
+    //Goes to last address unless at last address, then it goes to first.
+    //New function for toggle button
+    firstLastToggle(event) {
+        if (this.addressIndex < addresses.length - 1) {
+            this.addressIndex = addresses.length - 1;
+        } else {
+            this.addressIndex = 0;
         }
         const address = addresses[this.addressIndex];
 
@@ -95,6 +110,7 @@ class Address extends Component {
                     address={this.state.address}
                     onAddressChange={this.onAddressChange}
                     onAddressChangeReverse={this.onAddressChangeReverse}
+                    firstLastToggle={this.firstLastToggle}
                 />
             </div>
         );
