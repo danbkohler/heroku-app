@@ -16,16 +16,17 @@ import '../css/App.css';
 class App extends Component {
     constructor() {
         super();
+        this.getNine = this.getNine.bind(this);
         this.state = {
             nine: '0',
-        }
+        };
     }
-
-    getNine = () => {
+    //was getNine = () => {
+    getNine() {
         console.log('state');
         this.setState({
             nine: '9'
-        })
+        });
     };
 
     //Cleaning up render

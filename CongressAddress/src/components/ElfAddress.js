@@ -5,12 +5,13 @@ import React, { Component } from 'react';
 import addresses from '../address-list';
 import AddressShow from './AddressShow';
 
-
 class Address extends Component {
     constructor(props) {
         super(props);
         //Adding due to change in onAddressChange declaration syntax
         this.onAddressChange = this.onAddressChange.bind(this);
+        this.onAddressChangeReverse = this.onAddressChangeReverse.bind(this);
+        this.onNameChange = this.onNameChange.bind(this);
 
         this.addressIndex = 0;
         const address = addresses[this.addressIndex];
@@ -24,31 +25,31 @@ class Address extends Component {
     //Not sure why this change was necessary as JSCS doesn't seem to take issue with it
     onAddressChange(event) {
 
-        if(this.addressIndex < addresses.length - 1)
-        {
+        if (this.addressIndex < addresses.length - 1) {
             this.addressIndex += 1;
         }
         const address = addresses[this.addressIndex];
 
         this.setState({
             address: address
-        })
+        });
     };
 
-    onAddressChangeReverse = (event) => {
-        if (this.addressIndex > 0)
-        {
+    //onAddressChangeReverse = (event) => {
+    onAddressChangeReverse(event) {
+        if (this.addressIndex > 0) {
             this.addressIndex -= 1;
         }
         const address = addresses[this.addressIndex];
 
         this.setState({
             address: address
-        })
+        });
     };
 
     //Adding on 5/01 for ReactAddressEdit
-    onNameChange = (event) => {
+    //onNameChange = (event) => {
+    onNameChange(event) {
         //this.log("ON NAME CHANGE");
         const address = addresses[this.addressIndex];
         switch (event.target.id) {
@@ -81,7 +82,7 @@ class Address extends Component {
         }
         this.setState({
             address: address
-        })
+        });
     };
 
     //New render for ReactAddressMenu

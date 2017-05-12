@@ -2,16 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eb3dc09d-d870-42a3-a995-04d35538ed89" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/tests/App.test.js" afterPath="$PROJECT_DIR$/src/tests/SmallNumbers.test.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jest/haste-map--home-bcuser-Git-prog272-kohler-2017-week2-react-jest-492588a03c0c1d4403f7dd61bbe7262c" afterPath="$PROJECT_DIR$/jest/haste-map--home-bcuser-Git-prog272-kohler-2017-week2-react-jest-492588a03c0c1d4403f7dd61bbe7262c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jest/jest-transform-cache--home-bcuser-Git-prog272-kohler-2017-week2-react-jest-ed21b2b499b2ec5f84ae7ee155369e06/08/App_08b0272a3d531728c89adb5807d014f2" afterPath="$PROJECT_DIR$/jest/jest-transform-cache--home-bcuser-Git-prog272-kohler-2017-week2-react-jest-ed21b2b499b2ec5f84ae7ee155369e06/08/App_08b0272a3d531728c89adb5807d014f2" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jest/jest-transform-cache--home-bcuser-Git-prog272-kohler-2017-week2-react-jest-ed21b2b499b2ec5f84ae7ee155369e06/d3/App.test_d3277fc36d0344e900a667752aebd57a" afterPath="$PROJECT_DIR$/jest/jest-transform-cache--home-bcuser-Git-prog272-kohler-2017-week2-react-jest-ed21b2b499b2ec5f84ae7ee155369e06/d3/App.test_d3277fc36d0344e900a667752aebd57a" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jest/perf-cache--home-bcuser-Git-prog272-kohler-2017-week2-react-jest-271ad7a26ee235f099565e8d00a17ef8" afterPath="$PROJECT_DIR$/jest/perf-cache--home-bcuser-Git-prog272-kohler-2017-week2-react-jest-271ad7a26ee235f099565e8d00a17ef8" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/ElfAddress.js" afterPath="$PROJECT_DIR$/src/components/ElfAddress.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/tests/Address.test.js" afterPath="$PROJECT_DIR$/src/tests/Address.test.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/tests/AddressShow.test.js" afterPath="$PROJECT_DIR$/src/tests/AddressShow.test.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/SmallNumbers.js" afterPath="$PROJECT_DIR$/src/components/SmallNumbers.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -26,11 +18,23 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="SmallNumbers.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/SmallNumbers.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="234">
+              <caret line="13" column="10" lean-forward="true" selection-start-line="13" selection-start-column="10" selection-end-line="13" selection-end-column="10" />
+              <folding>
+                <element signature="e#0#41#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="ElfAddress.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/ElfAddress.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1584">
-              <caret line="88" column="55" lean-forward="false" selection-start-line="88" selection-start-column="55" selection-end-line="88" selection-end-column="55" />
+            <state relative-caret-position="-304">
+              <caret line="45" column="28" lean-forward="true" selection-start-line="45" selection-start-column="28" selection-end-line="45" selection-end-column="28" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
                 <element signature="e#41#82#0" expanded="true" />
@@ -52,7 +56,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AddressShow.test.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="AddressShow.test.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/tests/AddressShow.test.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="720">
@@ -64,11 +68,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Address.test.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Address.test.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/tests/Address.test.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-828">
-              <caret line="22" column="7" lean-forward="true" selection-start-line="22" selection-start-column="7" selection-end-line="22" selection-end-column="7" />
+            <state relative-caret-position="684">
+              <caret line="106" column="0" lean-forward="true" selection-start-line="106" selection-start-column="0" selection-end-line="106" selection-end-column="0" />
               <folding>
                 <element signature="e#41#67#0" expanded="true" />
               </folding>
@@ -117,12 +121,12 @@
         <option value="$PROJECT_DIR$/src/components/ElfHeader.js" />
         <option value="$PROJECT_DIR$/src/components/ElfMenu.js" />
         <option value="$PROJECT_DIR$/src/tests/App.test.js" />
-        <option value="$PROJECT_DIR$/src/components/SmallNumbers.js" />
-        <option value="$PROJECT_DIR$/src/components/ElfAddress.js" />
         <option value="$PROJECT_DIR$/src/tests/SmallNumbers.test.js" />
         <option value="$PROJECT_DIR$/src/components/AddressShow.js" />
         <option value="$PROJECT_DIR$/src/tests/AddressShow.test.js" />
         <option value="$PROJECT_DIR$/src/tests/Address.test.js" />
+        <option value="$PROJECT_DIR$/src/components/SmallNumbers.js" />
+        <option value="$PROJECT_DIR$/src/components/ElfAddress.js" />
       </list>
     </option>
   </component>
@@ -409,12 +413,12 @@
       <workItem from="1494284153365" duration="4550000" />
       <workItem from="1494453950519" duration="7535000" />
       <workItem from="1494534524418" duration="3174000" />
-      <workItem from="1494621011161" duration="6759000" />
+      <workItem from="1494621011161" duration="8066000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="76342000" />
+    <option name="totallyTimeSpent" value="77649000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="3" y="9" width="1501" height="1019" extended-state="0" />
@@ -746,7 +750,7 @@
         <state relative-caret-position="198">
           <caret line="11" column="26" lean-forward="false" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <element signature="n#!!doc" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -806,16 +810,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/SmallNumbers.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="34" column="40" lean-forward="true" selection-start-line="34" selection-start-column="40" selection-end-line="34" selection-end-column="40" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/tests/SmallNumbers.test.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="378">
@@ -839,15 +833,35 @@
         <state relative-caret-position="486">
           <caret line="29" column="28" lean-forward="false" selection-start-line="29" selection-start-column="28" selection-end-line="29" selection-end-column="28" />
           <folding>
-            <element signature="e#41#82#0" expanded="true" />
+            <element signature="e#41#82#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tests/Address.test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="684">
+          <caret line="106" column="0" lean-forward="true" selection-start-line="106" selection-start-column="0" selection-end-line="106" selection-end-column="0" />
+          <folding>
+            <element signature="e#41#67#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/SmallNumbers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="13" column="10" lean-forward="true" selection-start-line="13" selection-start-column="10" selection-end-line="13" selection-end-column="10" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/ElfAddress.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1584">
-          <caret line="88" column="55" lean-forward="false" selection-start-line="88" selection-start-column="55" selection-end-line="88" selection-end-column="55" />
+        <state relative-caret-position="-304">
+          <caret line="45" column="28" lean-forward="true" selection-start-line="45" selection-start-column="28" selection-end-line="45" selection-end-column="28" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="e#41#82#0" expanded="true" />
@@ -870,16 +884,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="720">
           <caret line="42" column="45" lean-forward="true" selection-start-line="42" selection-start-column="45" selection-end-line="42" selection-end-column="45" />
-          <folding>
-            <element signature="e#41#67#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/tests/Address.test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-828">
-          <caret line="22" column="7" lean-forward="true" selection-start-line="22" selection-start-column="7" selection-end-line="22" selection-end-column="7" />
           <folding>
             <element signature="e#41#67#0" expanded="true" />
           </folding>
