@@ -7,7 +7,7 @@ import Address from '../components/ElfAddress';
 import { shallow } from 'enzyme';
 import addresses from '../address-list';
 
-describe('Address Test', function () {
+describe('Address Test', function() {
 
     it('address renders without crashing', () => {
         const div = document.createElement('div');

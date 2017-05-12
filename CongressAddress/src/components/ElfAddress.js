@@ -9,7 +9,8 @@ import AddressShow from './AddressShow';
 class Address extends Component {
     constructor(props) {
         super(props);
-
+        //Adding due to change in onAddressChange declaration syntax
+        this.onAddressChange = this.onAddressChange.bind(this);
 
         this.addressIndex = 0;
         const address = addresses[this.addressIndex];
@@ -20,7 +21,9 @@ class Address extends Component {
     }
 
     //Was [onAddressChange = (event) =>] before JSCS
-    onAddressChange = (event) => {
+    //Not sure why this change was necessary as JSCS doesn't seem to take issue with it
+    onAddressChange(event) {
+
         if(this.addressIndex < addresses.length - 1)
         {
             this.addressIndex += 1;
@@ -83,10 +86,10 @@ class Address extends Component {
 
     //New render for ReactAddressMenu
     render() {
-        if (!this.quiet) { console.log("ADDRESS RENDER"); }
+        if (!this.quiet) { console.log('ADDRESS RENDER'); }
         return (
 
-            <div className="App">
+            <div className='App'>
                 <AddressShow
                     address={this.state.address}
                     onAddressChange={this.onAddressChange}
@@ -95,7 +98,6 @@ class Address extends Component {
             </div>
         );
     }
-
 
 }//end of class Address
 

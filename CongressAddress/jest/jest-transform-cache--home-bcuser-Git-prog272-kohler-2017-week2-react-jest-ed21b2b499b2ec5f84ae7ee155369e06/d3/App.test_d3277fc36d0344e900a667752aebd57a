@@ -1,4 +1,4 @@
-/* istanbul ignore next */'use strict';var _jsxFileName = '/home/bcuser/Git/prog272-kohler-2017/week2-react-jest/src/App.test.js';var /* istanbul ignore next */_react = require('react'); /* istanbul ignore next */var _react2 = _interopRequireDefault(_react);
+/* istanbul ignore next */'use strict';var _jsxFileName = '/home/bcuser/Git/prog272-kohler-2017/week2-react-jest/src/SmallNumbers.test.js';var /* istanbul ignore next */_react = require('react'); /* istanbul ignore next */var _react2 = _interopRequireDefault(_react);
 var /* istanbul ignore next */_reactDom = require('react-dom'); /* istanbul ignore next */var _reactDom2 = _interopRequireDefault(_reactDom);
 var /* istanbul ignore next */_App = require('./App'); /* istanbul ignore next */var _App2 = _interopRequireDefault(_App);
 var /* istanbul ignore next */_enzyme = require('enzyme'); /* istanbul ignore next */function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
