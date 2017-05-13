@@ -19,45 +19,6 @@ class AddressChanger extends Address {
         this.quiet = true;
     }
 
-    //Moved to ElfAddress
-    /*
-    onNameChange = (event) => {
-        //this.log("ON NAME CHANGE");
-        const address = addresses[this.addressIndex];
-        switch (event.target.id) {
-            case 'changeFirstName':
-                address.firstName = event.target.value;
-                break;
-            case 'changeLastName':
-                address.lastName = event.target.value;
-                break;
-            case 'changeStreet':
-                address.street = event.target.value;
-                break;
-            case 'changeCity':
-                address.city = event.target.value;
-                break;
-            case 'changeState':
-                address.usState = event.target.value;
-                break;
-            case 'changeZip':
-                address.zip = event.target.value;
-                break;
-            case 'changePhone':
-                address.phone = event.target.value;
-                break;
-            case 'changeWebsite':
-                address.website = event.target.value;
-                break;
-            default:
-                throw new Error('Bad case in Address onNameChange');
-        }
-        this.setState({
-            address: address
-        })
-    };
-    */
-
     render() {
         if (!this.quiet) {
             console.log('ADDRESS RENDER');

@@ -33,7 +33,7 @@ describe('AddressShow Shallow Suite', function() {
     });
 
     //const wrapper = shallow(<Address addressList={addresses} />);
-    it('renders default address line 1', () => {
+    fit('renders default address line 1', () => {
         const wrapper = shallow(<Address addressList={addresses} />);
         const unknownAddress = <p>Address: unknown</p>;
         expect(wrapper.contains(unknownAddress)).toEqual(true);

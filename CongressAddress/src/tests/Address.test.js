@@ -9,7 +9,7 @@ import addresses from '../address-list';
 
 describe('Address Test', function() {
 
-    it('address renders without crashing', () => {
+    fit('address renders without crashing', () => {
         const div = document.createElement('div');
         ReactDOM.render(<Address addressList={addresses} />, div);
     });
