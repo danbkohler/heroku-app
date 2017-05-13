@@ -13,7 +13,9 @@ import '../css/index.css';
 
 const address = addresses[0];
 
-//I think these cases may be for AddressShow, not AddressEdit
+//Some of these cases are for AddressShow, not AddressEdit
+//Once I start getting some working I will move them around and delete templates
+//Note: The test cases in SmallNumbers.test do Pass
 describe('Naive Address Edit Mount Jest Suite', function() {
 
     //Copy-paste from writing child tests (for AddressShow???):
@@ -24,26 +26,54 @@ describe('Naive Address Edit Mount Jest Suite', function() {
         expect(wrapper.contains(welcome)).toEqual(true);
     });
 
+    //This might be a getIndex override or something, doesn't help the test case below though
+    const getIndex = function(wrapper, index, talkToMe) {
+        if (!quiet || talkToMe) {
+            const ninep = wrapper.find('div#addressShowDiv').childAt(index).debug();
+            console.log('NINEP:', ninep);
+        }
+    };
+
+    const defaultFieldTest = (name, index, talkToMe) => {
+        const wrapper = shallow(<AddressShow address={address}  />);
+        const welcome = <p>{name}</p>;
+        getIndex(wrapper, index, talkToMe);
+        expect(wrapper.contains(welcome)).toEqual(true);
+    };
+
+    //My edit of the above template
     fit('renders and displays the default address in Show', () => {
         const wrapper = mount(<Address address={address}  />);
         const address1 = <p>Address: unknown</p>;
-        elfDebugEnzyme.getIndex(wrapper, 'div#AddressShowDiv', 3, true);
+        elfDebugEnzyme.getIndex(wrapper, 'div#addressShowDiv', 1, true);
         expect(wrapper.contains(address1)).toEqual(true);
     });
+    //Tried adding className='Address1' to <p> here and in AddressShow, didn't fix childAt error
+    //It's NOT 'div#AddressShowDiv' because 'addressShowRender' isn't in AddressShow version on CloudNotes
+    //I pasted in this getIndex const to see if it would have an effect, but no...
 
     //Copy-paste from ReactAddressEdit (for AddressEdit
     it('renders and displays the default value for firstName', () => {
         const wrapper = mount(<AddressChanger />);
         elfTestDebug.getFirst(wrapper, 'input');
-        const welcome = <input id="elfFirstName" className="App-intro" value="unknown" />;
+        const welcome = <input id='elfFirstName' className='App-intro' value='unknown' />;
         expect(wrapper.containsMatchingElement(welcome)).toEqual(true);
     });
 
+    //My edit of the above template
     fit('renders and displays the default address line in Edit', () => {
         const wrapper = mount(<AddressChanger />);
         elfDebugEnzyme.getFirst(wrapper, 'input');
-        const address1 = <input id='changeStreet' className='AddressEditDiv' value='unknown' />;
+        const address1 = <input id='changeStreet' className='App' value='unknown' />;
         expect(wrapper.containsMatchingElement(address1)).toEqual(true);
+    });
+    //className's tried: AddressEditDiv, App,
+
+    fit('renders and displays the default firstName in Edit', () => {
+        const wrapper = mount(<AddressChanger />);
+        elfDebugEnzyme.getFirst(wrapper, 'input');
+        const firstName = <input id='changeFirstName' className='AddressEditDiv' value='unknown' />;
+        expect(wrapper.containsMatchingElement(firstName)).toEqual(true);
     });
 
     it('renders and displays the default first name DK', () => {
