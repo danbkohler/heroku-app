@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eb3dc09d-d870-42a3-a995-04d35538ed89" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/elf-logger.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/public/addresses.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/saveLocalStorage.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/ElfAddress.js" afterPath="$PROJECT_DIR$/src/components/ElfAddress.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -20,12 +18,24 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ElfDebugEnzyme.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ElfDebugEnzyme.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ElfDebugEnzyme.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
-              <caret line="30" column="5" lean-forward="true" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
+            <state relative-caret-position="288">
+              <caret line="16" column="56" lean-forward="false" selection-start-line="16" selection-start-column="56" selection-end-line="16" selection-end-column="56" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ElfAddress.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/components/ElfAddress.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="576">
+              <caret line="34" column="28" lean-forward="true" selection-start-line="34" selection-start-column="28" selection-end-line="34" selection-end-column="28" />
+              <folding>
+                <element signature="e#41#82#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -46,7 +56,7 @@
         <entry file="file://$PROJECT_DIR$/src/public/addresses.json">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="504">
-              <caret line="28" column="17" lean-forward="true" selection-start-line="28" selection-start-column="17" selection-end-line="28" selection-end-column="17" />
+              <caret line="28" column="17" lean-forward="false" selection-start-line="28" selection-start-column="17" selection-end-line="28" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -94,7 +104,6 @@
         <option value="$PROJECT_DIR$/src/tests/App.test.js" />
         <option value="$PROJECT_DIR$/src/tests/SmallNumbers.test.js" />
         <option value="$PROJECT_DIR$/src/components/SmallNumbers.js" />
-        <option value="$PROJECT_DIR$/src/components/ElfAddress.js" />
         <option value="$PROJECT_DIR$/src/ElfEnzymeDebug.js" />
         <option value="$PROJECT_DIR$/src/components/AddressChanger.js" />
         <option value="$PROJECT_DIR$/src/components/AddressShow.js" />
@@ -106,6 +115,7 @@
         <option value="$PROJECT_DIR$/src/elf-logger.js" />
         <option value="$PROJECT_DIR$/src/saveLocalStorage.js" />
         <option value="$PROJECT_DIR$/src/public/addresses.json" />
+        <option value="$PROJECT_DIR$/src/components/ElfAddress.js" />
       </list>
     </option>
   </component>
@@ -114,6 +124,9 @@
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodeModulesDirectoryManager">
+    <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="11" />
@@ -411,12 +424,12 @@
       <workItem from="1494641707701" duration="6996000" />
       <workItem from="1494808486778" duration="2617000" />
       <workItem from="1494811123849" duration="1026000" />
-      <workItem from="1494814629621" duration="1002000" />
+      <workItem from="1494814629621" duration="1239000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="99044000" />
+    <option name="totallyTimeSpent" value="99281000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="11" y="16" width="1501" height="1019" extended-state="0" />
@@ -509,7 +522,7 @@
         <state relative-caret-position="1062">
           <caret line="62" column="23" lean-forward="true" selection-start-line="62" selection-start-column="23" selection-end-line="62" selection-end-column="23" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#41#82#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -725,16 +738,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/ElfAddress.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1312">
-          <caret line="5" column="39" lean-forward="false" selection-start-line="5" selection-start-column="39" selection-end-line="5" selection-end-column="39" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/AddressChanger.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
@@ -827,7 +830,7 @@
     <entry file="file://$PROJECT_DIR$/src/public/addresses.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="504">
-          <caret line="28" column="17" lean-forward="true" selection-start-line="28" selection-start-column="17" selection-end-line="28" selection-end-column="17" />
+          <caret line="28" column="17" lean-forward="false" selection-start-line="28" selection-start-column="17" selection-end-line="28" selection-end-column="17" />
           <folding />
         </state>
       </provider>
@@ -842,9 +845,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ElfDebugEnzyme.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="30" column="5" lean-forward="true" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
+        <state relative-caret-position="288">
+          <caret line="16" column="56" lean-forward="false" selection-start-line="16" selection-start-column="56" selection-end-line="16" selection-end-column="56" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/ElfAddress.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="576">
+          <caret line="34" column="28" lean-forward="true" selection-start-line="34" selection-start-column="28" selection-end-line="34" selection-end-column="28" />
+          <folding>
+            <element signature="e#41#82#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -4,6 +4,7 @@
 import React, { Component } from 'react';
 import addresses from '../address-list';
 import AddressShow from './AddressShow';
+import 'whatwg-fetch';
 
 class Address extends Component {
     constructor(props) {
@@ -20,6 +21,19 @@ class Address extends Component {
             address: address
         };
         this.quiet = true;
+
+        //Adding for http://www.ccalvert.net/books/CloudNotes/Assignments/Browser/LearnLocalStorage.html#load-json
+        fetch('./addresses.json').then(function(data) {
+            const addresses = data.json();
+            console.log(addresses);
+            return addresses;
+        }).then(function (data) {
+            console.log(JSON.stringify(data, null, 4));
+            that.addresses = data;
+            that.setLocalStorage();
+        }).catch(function (err) {
+            logger.log(err);
+        })
     }
 
     //Was [onAddressChange = (event) =>] before JSCS
