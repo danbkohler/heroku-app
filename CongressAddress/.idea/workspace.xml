@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="eb3dc09d-d870-42a3-a995-04d35538ed89" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/ElfAddress.js" afterPath="$PROJECT_DIR$/src/components/ElfAddress.js" />
-    </list>
+    <list default="true" id="eb3dc09d-d870-42a3-a995-04d35538ed89" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -424,12 +421,12 @@
       <workItem from="1494641707701" duration="6996000" />
       <workItem from="1494808486778" duration="2617000" />
       <workItem from="1494811123849" duration="1026000" />
-      <workItem from="1494814629621" duration="1239000" />
+      <workItem from="1494814629621" duration="1284000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="99281000" />
+    <option name="totallyTimeSpent" value="99326000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="11" y="16" width="1501" height="1019" extended-state="0" />
