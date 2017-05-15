@@ -7,7 +7,8 @@ import '../css/AddressShow.css';
 class AddressShow extends Component {
     constructor(props) {
         super(props);
-        this.quiet = false;
+        this.quiet = true;
+        //changed quiet from false to true to reduce npm test message spam
         this.log('SHOW ADDRESS CONSTRUCTOR', this.props.address);
     }
 

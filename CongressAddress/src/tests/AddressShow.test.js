@@ -15,6 +15,8 @@ import Address from '../components/ElfAddress';
 //And simulating clicks w/former: Method “props” is only meant to be run on a single node. 0 found instead.
 //Is shallow the problem?
 
+//ElfAddress imports AddressShow, keeping those cases in 1 location
+/*
 describe('AddressShow Shallow Suite', function() {
     var quiet = true;
 
@@ -66,6 +68,7 @@ describe('AddressShow Shallow Suite', function() {
     });
 
 });
+*/
 
 /*
  it('renders and displays the default full name', () => {

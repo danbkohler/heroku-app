@@ -27,7 +27,7 @@ export default class ElfDebugEnzyme {
     }
 
     display(value) {
-        console.log(this.callerName + value);
+        //console.log(this.callerName + value);
     }
 
     getAll(wrapper, showMe) {
