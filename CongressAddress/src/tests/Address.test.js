@@ -45,23 +45,36 @@ describe('Address Test', function() {
         expect(wrapper.contains(fullName)).toEqual(true);
     });
 
+    it('Toggles to last full name in array', () => {
+        const wrapper = mount(<Address addressList={addresses} />);
+        wrapper.find('#firstLastToggle').simulate('click');
+        const fullName = <p>Name: Suzan DelBene </p>;
+        expect(wrapper.contains(fullName)).toEqual(true);
+    });
+
+    it('Toggles back to first name entry in array', () => {
+        const wrapper = mount(<Address addressList={addresses} />);
+        wrapper.find('#firstLastToggle').simulate('click');
+        wrapper.find('#firstLastToggle').simulate('click');
+        const fullName = <p>Name: unknown unknown </p>;
+        expect(wrapper.contains(fullName)).toEqual(true);
+    });
+
+    it('moves Back 1 name after moving forward 2 names in array', () => {
+        const wrapper = mount(<Address addressList={addresses} />);
+        wrapper.find('#showAddressClick').simulate('click');
+        wrapper.find('#showAddressClick').simulate('click');
+        wrapper.find('#showAddressClickBack').simulate('click');
+        const fullName = <p>Name: Patty Murray </p>;
+        expect(wrapper.contains(fullName)).toEqual(true);
+    });
+
     it('renders and displays the default address line 1', () => {
         const wrapper = mount(<Address addressList={addresses} />);
         //const address = <p>Address: {this.state.street}</p>
         const address = <p>Address: unknown</p>;
         expect(wrapper.contains(address)).toEqual(true);
     });
-
-    //Here is what I had tried in AddressEdit.test:
-    //wrapper was incorrect, and elfDebugEnzyme stuff likely just introducing confusion
-    /*
-    fit('renders and displays the default address in Show', () => {
-        const wrapper = mount(<Address address={address}  />);
-        const address1 = <p>Address: unknown</p>;
-        elfDebugEnzyme.getIndex(wrapper, 'div#addressShowDiv', 1, true);
-        expect(wrapper.contains(address1)).toEqual(true);
-    });
-    */
 
     it('renders and displays the 1st updated address line 1', () => {
         const wrapper = mount(<Address addressList={addresses} />);
@@ -110,22 +123,6 @@ describe('Address Test', function() {
         const phone = <p>City/State/Zip: Seattle WA 98174</p>;
         expect(wrapper.contains(phone)).toEqual(true);
     });
-
-    /*
-    it('renders and reads H2 text', () => {
-        const wrapper = mount(<Address addressList={addresses} />);
-        const welcome = <h2>Welcome to Prog 272</h2>;
-        expect(wrapper.contains(welcome)).toEqual(true);
-    });
-    */
-
-    /*
-     it('displays the default App-logo', () => {
-     const wrapper = mount(<Address addressList={addresses} />);
-     const innerNode = wrapper.find('.App-logo');
-     expect(innerNode.length).toEqual(1);
-     });
-     */
 
     it('see if true is true', () => {
         expect(true).toBe(true);

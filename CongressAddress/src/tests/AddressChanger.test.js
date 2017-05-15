@@ -9,21 +9,15 @@ const elfDebugEnzyme = new ElfDebugEnzyme(true, 'Foo.test.js');
 
 //Will implement these test cases in a bit
 //Refer to Address.test for syntax assistance
+//AddressChanger IMPORTS AddressEdit and EXTENDS Address
 describe('React Address Changer Test Suite', function() {
     var quiet = true;
 
-    it('renders and displays the default full name', () => {
+    //This is a functioning test case for AddressChanger!
+    it('renders and displays the default value for firstName', () => {
         const wrapper = mount(<AddressChanger />);
-        const fullName = <p>Name: unknown unknown </p>;
-        expect(wrapper.containsMatchingElement(fullName)).toEqual(true);
-    });
-
-    //this is a template ONLY
-    fit('renders and displays the default value for firstName', () => {
-        const wrapper = mount(<AddressChanger />);
-        elfTestDebug.getFirst(wrapper, 'input');
-        const welcome = <input id="elfFirstName" className="App-intro" value="unknown" />;
-        expect(wrapper.containsMatchingElement(welcome)).toEqual(true);
+        const firstName = <input id='changeFirstName' value='unknown' />;
+        expect(wrapper.containsMatchingElement(firstName)).toEqual(true);
     });
 
     /*
