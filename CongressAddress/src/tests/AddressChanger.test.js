@@ -13,6 +13,26 @@ const elfDebugEnzyme = new ElfDebugEnzyme(true, 'Foo.test.js');
 describe('React Address Changer Test Suite', function() {
     var quiet = true;
 
+    //Added this for http://www.ccalvert.net/books/CloudNotes/Assignments/React/ReactAddressMock.html
+    beforeEach(function () {
+        const localStorageMock = (function () {
+            let storage = {};
+            return {
+                getItem: function (key) {
+                    return storage[key];
+                },
+                setItem: function(key, value) {
+                    storage[key] = value.toString();
+                },
+                clear: function() {
+                    storage = {};
+                }
+            };
+        })();
+        object.defineProperty(global, 'localStorage', {value: localStorageMock});
+    });
+    //ToDo: Refer to assignment and make necessary before and after changes.  And maybe use this in other test suites
+
     //This is a functioning test case for AddressChanger!
     it('renders and displays the default value for firstName', () => {
         const wrapper = mount(<AddressChanger />);

@@ -6,6 +6,9 @@ import addresses from '../address-list';
 import AddressShow from './AddressShow';
 import 'whatwg-fetch';
 
+//fetch block will break page if you don't do: npm install --save whatwg-fetch
+//Still broken after doing it ('that' and 'logger' not defined)
+
 class Address extends Component {
     constructor(props) {
         super(props);
@@ -22,6 +25,7 @@ class Address extends Component {
         };
         this.quiet = true;
 
+        /*
         //Adding for http://www.ccalvert.net/books/CloudNotes/Assignments/Browser/LearnLocalStorage.html#load-json
         fetch('./addresses.json').then(function(data) {
             const addresses = data.json();
@@ -34,6 +38,7 @@ class Address extends Component {
         }).catch(function (err) {
             logger.log(err);
         })
+        */
     }
 
     //Was [onAddressChange = (event) =>] before JSCS
