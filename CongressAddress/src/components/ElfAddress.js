@@ -16,6 +16,7 @@ import 'whatwg-fetch';
 84:9 error 'detailLogger' is not defined no-undef
 85:25 error 'getByIndex' is not defined no-undef
 */
+//After moving code to DataMaven, these errors occur there instead
 
 class Address extends Component {
     constructor(props) {

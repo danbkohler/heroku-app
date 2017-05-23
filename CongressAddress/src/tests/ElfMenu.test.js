@@ -32,6 +32,12 @@ describe('ElfMenu Suite', function() {
         ReactDOM.render(<DataRouter><ElfMenu /></DataRouter>, div);
     });
 
+    //v2
+    it('renders the ElfMenu component without crashing', () => {
+        const div = document.createElement('div');
+        ReactDOM.render(<Router><ElfMenu /></Router>, div);
+    });
+
     it('Shows there is no BrowserRouter in ElfMenu', () => {
         const wrapper = shallow(<ElfMenu />);
         const router = wrapper.find('BrowserRouter');
