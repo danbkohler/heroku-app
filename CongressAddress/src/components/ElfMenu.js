@@ -14,11 +14,13 @@ import '../css/ElfMenu.css';
 
 //Note: ElfAddress imports AddressShow
 //Should path for /small be App or SmallNumbers?  App because class is what matters
+
+//Route code being commented out as DataMaven will be handling this code
 class ElfMenu extends Component {
 
     render() {
         return (
-            <Router>
+            //<Router>
                 <div>
                     <div className='ElfMenuDiv'>
                         <ul>
@@ -27,11 +29,13 @@ class ElfMenu extends Component {
                             <li><Link to='/small'>SmallNumbers</Link></li>
                         </ul>
                     </div>
+                    /*
                     <Route exact path='/' component={ElfAddress}/>
                     <Route path='/edit' component={AddressChanger}/>
                     <Route path='/small' component={App}/>
+                    */
                 </div>
-            </Router>
+            //</Router>
         );
     }
 }

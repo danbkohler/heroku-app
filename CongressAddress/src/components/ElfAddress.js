@@ -9,6 +9,14 @@ import 'whatwg-fetch';
 //fetch block will break page if you don't do: npm install --save whatwg-fetch
 //Still broken after doing it ('that' and 'logger' not defined)
 
+//After changing index.js to use DataMaven, I get these errors for this file:
+/*
+46:9 error 'dataLoader' is not defined no-undef
+74:9 error 'detailLogger' is not defined no-undef
+84:9 error 'detailLogger' is not defined no-undef
+85:25 error 'getByIndex' is not defined no-undef
+*/
+
 class Address extends Component {
     constructor(props) {
         super(props);
