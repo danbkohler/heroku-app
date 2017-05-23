@@ -39,15 +39,50 @@ class Address extends Component {
             logger.log(err);
         })
         */
+
+        //Adding for http://www.ccalvert.net/books/CloudNotes/Assignments/React/ReactAddressMock.html
+        //DataLoader section
+        const that = this;
+        dataLoader.loadAddresses(function(addressCount) {
+            if (!addressCount) {
+                throw new Error('Cannot get address count in address.js');
+            }
+            that.addressCount = addressCount;
+        });
+
     }
 
     //Was [onAddressChange = (event) =>] before JSCS
+    //This is functioning onAddressChange used prior to ReactAddressMock
+    /*
     onAddressChange(event) {
 
         if (this.addressIndex < addresses.length - 1) {
             this.addressIndex += 1;
         }
         const address = addresses[this.addressIndex];
+
+        this.setState({
+            address: address
+        });
+    };
+    */
+
+    //Refer to Load Local Data section of ReactAddressMock
+    //Enables localstorage testing, but might introduce other bugs...
+    onAddressChange(event) {
+        detailLogger.log('onAddressChange called with', event.target.id);
+        if (event.target.id.startsWith('dec')) {
+            if (this.addressIndex > 0) {
+                this.addressIndex -= 1;
+            }
+        } else {
+            if (this.addressIndex < this.addressCount) {
+                this.addressIndex += 1;
+            }
+        }
+        detailLogger.log('addressIndex', this.addressIndex);
+        const address = getByIndex(this.addressIndex);
 
         this.setState({
             address: address
