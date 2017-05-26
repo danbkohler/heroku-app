@@ -50,3 +50,6 @@
   background-image: linear-gradient(to bottom, #26759e, #133d5b);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#26759e, endColorstr=#133d5b);
 }
 
+.elf-p {
+  font-size: 18px;
+}

@@ -145,7 +145,7 @@ class DataMaven extends Component {
     render() {
         return (
             <Router>
-                <div>
+                <div className="container">
                     <ElfHeader />
                     <ElfMenu />
                     <Route exact path='/' component={ElfAddress}/>
