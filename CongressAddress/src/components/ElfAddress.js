@@ -3,7 +3,7 @@
  */
 import React, { Component } from 'react';
 //TODO: Make addresses import below no longer necessary
-import addresses from '../address-list';
+//import addresses from '../address-list';
 import AddressShow from './AddressShow';
 import 'whatwg-fetch';
 import Logger from '../assets/elf-logger';

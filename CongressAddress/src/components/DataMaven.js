@@ -12,11 +12,6 @@ import ElfMenu from './ElfMenu';
 import ElfHeader from './ElfHeader';
 import addresses from '../address-list';
 import 'whatwg-fetch';
-import {
-    BrowserRouter as Router,
-    Route,
-    Link
-} from 'react-router-dom';
 import DataLoader from '../assets/DataLoader';
 const dataLoader = new DataLoader();
 import Logger from '../assets/elf-logger';
