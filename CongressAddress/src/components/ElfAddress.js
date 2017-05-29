@@ -2,9 +2,12 @@
  * Created by bcuser on 4/22/17.
  */
 import React, { Component } from 'react';
+//TODO: Make addresses import below no longer necessary
 import addresses from '../address-list';
 import AddressShow from './AddressShow';
 import 'whatwg-fetch';
+import Logger from '../assets/elf-logger';
+const logger = new Logger('address', 'yellow', 'green', '16px');
 
 //fetch block will break page if you don't do: npm install --save whatwg-fetch
 //Still broken after doing it ('that' and 'logger' not defined)
@@ -18,10 +21,13 @@ import 'whatwg-fetch';
 */
 //After moving code to DataMaven, these errors occur there instead
 
+//TODO: Ultimate goal to get rid of this class entirely, for now only use render
 class Address extends Component {
     constructor(props) {
         super(props);
+        logger.log('ElfAddress constructor called - legacy code');
         //Adding due to change in onAddressChange declaration syntax, for JSCS compliance
+        /*
         this.onAddressChange = this.onAddressChange.bind(this);
         this.onAddressChangeReverse = this.onAddressChangeReverse.bind(this);
         this.onNameChange = this.onNameChange.bind(this);
@@ -33,7 +39,7 @@ class Address extends Component {
             address: address
         };
         this.quiet = true;
-
+        */
         /*
         //Adding for http://www.ccalvert.net/books/CloudNotes/Assignments/Browser/LearnLocalStorage.html#load-json
         fetch('./addresses.json').then(function(data) {
@@ -48,9 +54,9 @@ class Address extends Component {
             logger.log(err);
         })
         */
-
         //Adding for http://www.ccalvert.net/books/CloudNotes/Assignments/React/ReactAddressMock.html
         //DataLoader section
+        /*
         const that = this;
         dataLoader.loadAddresses(function(addressCount) {
             if (!addressCount) {
@@ -58,8 +64,8 @@ class Address extends Component {
             }
             that.addressCount = addressCount;
         });
-
-    }
+        */
+    }//end of Constructor
 
     //Was [onAddressChange = (event) =>] before JSCS
     //This is functioning onAddressChange used prior to ReactAddressMock
@@ -76,7 +82,7 @@ class Address extends Component {
         });
     };
     */
-
+    /*
     //Refer to Load Local Data section of ReactAddressMock
     //Enables localstorage testing, but might introduce other bugs...
     onAddressChange(event) {
@@ -162,18 +168,19 @@ class Address extends Component {
             address: address
         });
     };
+    */
 
     //New render for ReactAddressMenu
     render() {
-        if (!this.quiet) { console.log('ADDRESS RENDER'); }
+        logger.log('ADDRESS RENDER', this.props.address);
         return (
 
             <div className='App'>
                 <AddressShow
-                    address={this.state.address}
-                    onAddressChange={this.onAddressChange}
-                    onAddressChangeReverse={this.onAddressChangeReverse}
-                    firstLastToggle={this.firstLastToggle}
+                    address={this.props.address}
+                    onAddressChange={this.props.onAddressChange}
+                    onAddressChangeReverse={this.props.onAddressChangeReverse}
+                    firstLastToggle={this.props.firstLastToggle}
                 />
             </div>
         );

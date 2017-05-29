@@ -1,8 +1,5 @@
 import React, { Component } from 'react';
 //import '../css/App.css';
-import { Link } from 'react-router-dom';
-import { MenuItem, Nav, Navbar, NavDropdown, NavItem   } from 'react-bootstrap';
-import { LinkContainer } from 'react-router-bootstrap';
 
 //Why am I getting "jscs expected end of node list but punctuator found ()" on line 1?
 

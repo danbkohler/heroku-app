@@ -2,22 +2,14 @@
  * Created by bcuser on 5/1/17.
  */
 import React, {Component} from 'react';
-import { Link } from 'react-router-dom';
 import { MenuItem, Nav, Navbar, NavDropdown, NavItem   } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
-import ElfAddress from './ElfAddress';
-import AddressChanger from './AddressChanger';
-import App from './SmallNumbers';
-import {
-    BrowserRouter as Router,
-    Route,
-    Link
-} from 'react-router-dom';
-//import '../css/ElfMenu.css';
+import '../css/App.css';
 
 //Note: ElfAddress imports AddressShow
 //Should path for /small be App or SmallNumbers?  App because class is what matters
 
+//Replaced <LinkContainer this.state.index to='/'><NavItem>Address Show</NavItem></LinkContainer>
 class ElfMenu extends Component {
 
     render() {
@@ -31,7 +23,8 @@ class ElfMenu extends Component {
                 </Navbar.Header>
                 <Navbar.Collapse>
                     <Nav>
-                        <LinkContainer this.state.index to='/'><NavItem>Address Show</NavItem></LinkContainer>
+                        <LinkContainer to='/'><NavItem>AddressShow</NavItem></LinkContainer>
+                        <LinkContainer to='/edit'><NavItem>AddressEdit</NavItem></LinkContainer>
                         <NavDropdown eventKey={3} title="Dropdown" id="basic-nav-dropdown">
                             <MenuItem eventKey={3.1}>Action</MenuItem>
                             <MenuItem eventKey={3.2}>Another action</MenuItem>
