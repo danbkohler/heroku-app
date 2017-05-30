@@ -150,6 +150,23 @@ class DataMaven extends Component {
         });
     };
 
+    //For LearnLocalStorage
+    componentDidMount() {
+        logger.log('DID MOUNT');
+        const that = this;
+        dataLoader.loadAddresses(function(addressCount) {
+            if (!addressCount) {
+                throw new Error('Cannot get address count in address.js');
+            }
+            that.addressCount = addressCount;
+            logger.log('LOADED ADDRESS');
+            const address = getByIndex(that.addressIndex);
+            that.setState({
+                address: address
+            });
+        });
+    }
+
     //TODO: I need to pass props to ElfAddress and AddressEdit
     //Took out <Route exact path='/' component={ElfAddress}/>
     render() {
