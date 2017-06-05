@@ -10,8 +10,9 @@ $(document).ready(function() { 'use strict';
             .done(function() {
                 console.log( "second success" );
             })
-            .fail(function() {
-                alert( "error" );
+            .fail(function(error) {
+                //alert( "error" );
+                alert(JSON.stringify(error.responseJSON, null, 4));
             })
             .always(function() {
                 console.log( "finished" );
