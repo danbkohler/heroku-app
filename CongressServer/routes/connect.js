@@ -22,6 +22,7 @@ const connect = {
         });
     },
 
+    //username dank, password prog272
     custom: function() {
         'use strict';
         console.log('Connecting with simple.');
@@ -43,14 +44,15 @@ const connect = {
     },
 
     // mongodb://<dbuser>:<dbpassword>@ds049848.mlab.com:49848/elvenlab01
+    //mongodb://<dbuser>:<dbpassword>@ds111622.mlab.com:11622/prog272dank
     mlabConnect: function() {
         'use strict';
         console.log('Connecting with mlab.');
         connect.connected = true;
-        var userName = 'pol';
-        var password = 'polFooBarQux';
-        var siteAndPort = 'ds049848.mlab.com:49848';
-        var databaseName = 'elvenlab01';
+        var userName = 'dank'; //pol
+        var password = 'prog272'; //polFooBarQux
+        var siteAndPort = 'ds111622.mlab.com:11622';
+        var databaseName = 'prog272dank';
         var url = 'mongodb://' + userName + ':' + password + '@' + siteAndPort + '/' + databaseName;
 
         mongoose.connect(url);
