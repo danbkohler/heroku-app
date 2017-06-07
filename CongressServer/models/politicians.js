@@ -3,11 +3,18 @@
  */
 var mongoose = require('mongoose');
 
-//Need to add more attributes...
+//Can remove attributes if there are some no longer needed
 var politicianSchema = mongoose.Schema({
     'firstName': String,
     'lastName': String,
-    'address': String
+    'street': String,
+    'city': String,
+    'state': String,
+    'zip': String,
+    'phone': String,
+    'website': String,
+    'email': String,
+    'contact': String
 });
 
 module.exports = mongoose.model('politician', politicianSchema);

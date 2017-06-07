@@ -12,7 +12,7 @@ function allMongo() {
 }
 
 allMongo.numberOfPoliticians = 0;
-
+//adding 'street' to this function
 function insertPolitician(politician, response) {
     'use strict';
     if (!connect.connected) {
@@ -21,6 +21,7 @@ function insertPolitician(politician, response) {
     const newPolitician = new Politicians({
         'firstName': politician.firstName,
         'lastName': politician.lastName,
+        'street': politician.street,
         'city': politician.city,
         'state': politician.state,
         'zip': politician.zip,
