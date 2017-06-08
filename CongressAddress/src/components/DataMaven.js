@@ -166,6 +166,19 @@ class DataMaven extends Component {
             });
         });
     }
+    //change componentDidMount to have JUST this.loadFromDatabase(); and logger line at top -6/07/17
+
+    //Adding on 6/07/17
+    /*
+    loadFromDatabase() {
+        const that = this;
+        dataLoader.loadAddresses(function(addressCount)
+        if (!addressCount) {
+           throw new Error ('Cannot get address count')
+        }
+        that.addressCount);
+    }
+    */
 
     //TODO: I need to pass props to ElfAddress and AddressEdit
     //Took out <Route exact path='/' component={ElfAddress}/>

@@ -5,6 +5,8 @@ import DataMaven from './components/DataMaven';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/css/bootstrap-theme.css';
 
+//type npm run go to start server and npm start at same time (see package.json)
+
 //Current hierarchy:
 /*
 DataMaven

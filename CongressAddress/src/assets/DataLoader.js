@@ -27,6 +27,8 @@ export default class DataLoader {
         return addresses;
     }
 
+    //changing this line: fetch('./address-list.json').then(function(data) {
+    //to this line: fetch('./get-all').then(function(data) {
     loadAddresses(callback) {
         const that = this;
         if (this.dataLoaded()) {
@@ -34,7 +36,7 @@ export default class DataLoader {
             callback(localStorage.getItem(this.STORE_SET[2]));
         } else {
             logger.log('Loading data');
-            fetch('./address-list.json').then(function(data) {
+            fetch('./all-data').then(function(data) {
                 const addresses = data.json();
                 console.log(addresses);
                 return addresses;
