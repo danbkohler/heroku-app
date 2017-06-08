@@ -3,10 +3,17 @@ var router = express.Router();
 var allMongo = require('./all-mongo');
 var connect = require('./connect');
 
+//To get CongressAddress interface to run using this DB...
+//From CongressAddress: npm run build
+//Then, from CongressServer:
+//cp -rv ../CongressAddress/build/ * public/.
+//Finally, comment out res.render, and comment in res.loadFile(index.html)
+
 //This is from "Some more code
 router.get('/', function(req, res) {
     'use strict';
     res.render('index', {title: 'CongressServer-Kohler2'});
+    //res.loadFile(index.html);
 });
 
 function checkConnection() {
