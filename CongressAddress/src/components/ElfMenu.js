@@ -12,6 +12,7 @@ import '../css/App.css';
 //Replaced <LinkContainer this.state.index to='/'><NavItem>Address Show</NavItem></LinkContainer>
 class ElfMenu extends Component {
 
+    /*
     render() {
         const navbarInstance = (
             <Navbar inverse collapseOnSelect>
@@ -38,6 +39,30 @@ class ElfMenu extends Component {
                         <NavItem eventKey={2} href="#">Link Right</NavItem>
                     </Nav>
                 </Navbar.Collapse>
+            </Navbar>
+        );
+        return (
+            <div>
+                {navbarInstance}
+            </div>
+        );
+    }
+    */
+    //cleaned up render
+    //breaks if you go to Edit before clicking a button
+    render() {
+        const navbarInstance = (
+            <Navbar inverse collapseOnSelect>
+                <Navbar.Header>
+                    <Navbar.Brand>
+                        <LinkContainer to='/'><NavItem>CongressAddress</NavItem></LinkContainer>
+                    </Navbar.Brand>
+                    <Navbar.Toggle />
+                </Navbar.Header>
+                    <Nav>
+                        <LinkContainer to='/'><NavItem>AddressShow</NavItem></LinkContainer>
+                        <LinkContainer to='/edit'><NavItem>AddressEdit</NavItem></LinkContainer>
+                    </Nav>
             </Navbar>
         );
         return (

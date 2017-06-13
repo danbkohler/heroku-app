@@ -19,13 +19,6 @@ const logger = new Logger('data-maven', 'yellow', 'green', '16px');
 const detailLogger = new Logger('data-maven:detail', 'white', 'green', '16px');
 import {getByIndex} from '../assets/elf-local-storage';
 
-/*
- 47:9   error    'dataLoader' is not defined                 no-undef
- 56:9   error    'detailLogger' is not defined               no-undef
- 66:9   error    'detailLogger' is not defined               no-undef
- 67:25  error    'getByIndex' is not defined                 no-undef
-*/
-//Is this set of errors related to LearnLocalStorage? whatwg-fetch?
 
 class DataMaven extends Component {
     constructor(props) {
@@ -36,9 +29,16 @@ class DataMaven extends Component {
         this.onNameChange = this.onNameChange.bind(this);
         this.firstLastToggle = this.firstLastToggle.bind(this);
 
-        /*
+        //moving const that = this & dataLoader up a bit
+        const that = this;
+        dataLoader.loadAddresses(function(addressCount) {
+            if (!addressCount) {
+                throw new Error('Cannot get address count in address.js');
+            }
+            that.addressCount = addressCount;
+        });
          //Adding for http://www.ccalvert.net/books/CloudNotes/Assignments/Browser/LearnLocalStorage.html#load-json
-         fetch('./addresses.json').then(function(data) {
+         fetch('./address-list.json').then(function(data) {
          const addresses = data.json();
          console.log(addresses);
          return addresses;
@@ -48,11 +48,14 @@ class DataMaven extends Component {
          that.setLocalStorage();
          }).catch(function (err) {
          logger.log(err);
-         })
-         */
+         });
+         //Uncommented the above block on 6/12
+        //changed ./addresses to address-list.json, file loaded into console
+        //but page still uses address-list.js
 
         //Adding for http://www.ccalvert.net/books/CloudNotes/Assignments/React/ReactAddressMock.html
         //DataLoader section
+        /*
         const that = this;
         dataLoader.loadAddresses(function(addressCount) {
             if (!addressCount) {
@@ -60,7 +63,7 @@ class DataMaven extends Component {
             }
             that.addressCount = addressCount;
         });
-
+        */
         //Moved to after DataLoader section
         this.addressIndex = 0;
         const address = addresses[this.addressIndex];
@@ -70,6 +73,7 @@ class DataMaven extends Component {
         this.quiet = true;
     }
 
+    /*
     onAddressChange(event) {
         detailLogger.log('onAddressChange called with', event.target.id);
         if (event.target.id.startsWith('dec')) {
@@ -83,6 +87,19 @@ class DataMaven extends Component {
         }
         detailLogger.log('addressIndex', this.addressIndex);
         const address = getByIndex(this.addressIndex);
+
+        this.setState({
+            address: address
+        });
+    };
+    */
+    //Trying to fix onAddressChange 6/12/17
+    onAddressChange(event) {
+
+        if (this.addressIndex < addresses.length - 1) {
+            this.addressIndex += 1;
+        }
+        const address = addresses[this.addressIndex];
 
         this.setState({
             address: address
@@ -150,7 +167,8 @@ class DataMaven extends Component {
         });
     };
 
-    //For LearnLocalStorage
+    //For LearnLocalStorage (old componentDidMount)
+    /*
     componentDidMount() {
         logger.log('DID MOUNT');
         const that = this;
@@ -166,19 +184,30 @@ class DataMaven extends Component {
             });
         });
     }
+    */
     //change componentDidMount to have JUST this.loadFromDatabase(); and logger line at top -6/07/17
 
-    //Adding on 6/07/17
-    /*
+    //New componentDidMount added 6/07
+    componentDidMount() {
+        logger.log('DID MOUNT');
+        this.loadFromDatabase();
+    }
+
     loadFromDatabase() {
         const that = this;
-        dataLoader.loadAddresses(function(addressCount)
-        if (!addressCount) {
-           throw new Error ('Cannot get address count')
-        }
-        that.addressCount);
+        dataLoader.loadAddresses(function(addressCount) {
+            if (!addressCount) {
+                throw new Error('Cannot get address count in address.js');
+            }
+            that.addressCount = addressCount;
+            logger.log('LOADED ADDRESS');
+            const address = getByIndex(that.addressIndex);
+            that.setState({
+                address: address
+            });
+        });
     }
-    */
+
 
     //TODO: I need to pass props to ElfAddress and AddressEdit
     //Took out <Route exact path='/' component={ElfAddress}/>
