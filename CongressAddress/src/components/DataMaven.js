@@ -19,6 +19,7 @@ const logger = new Logger('data-maven', 'yellow', 'green', '16px');
 const detailLogger = new Logger('data-maven:detail', 'white', 'green', '16px');
 import {getByIndex} from '../assets/elf-local-storage';
 
+let addresses;
 
 class DataMaven extends Component {
     constructor(props) {
@@ -28,7 +29,7 @@ class DataMaven extends Component {
         this.onAddressChangeReverse = this.onAddressChangeReverse.bind(this);
         this.onNameChange = this.onNameChange.bind(this);
         this.firstLastToggle = this.firstLastToggle.bind(this);
-
+        /*
         //moving const that = this & dataLoader up a bit
         const that = this;
         dataLoader.loadAddresses(function(addressCount) {
@@ -37,21 +38,23 @@ class DataMaven extends Component {
             }
             that.addressCount = addressCount;
         });
-
+        */
          //Adding for http://www.ccalvert.net/books/CloudNotes/Assignments/Browser/LearnLocalStorage.html#load-json
-         fetch('./address-list.json').then(function(data) {
+        /*
+        fetch('./address-list.json').then(function(data) {
          const addresses = data.json();
          console.log(addresses);
          return addresses;
          }).then(function (data) {
          console.log(JSON.stringify(data, null, 4));
-         that.addresses = data;
-         that.setLocalStorage();
+         //that.addresses = data;
+         //that.setLocalStorage();
 
          }).catch(function (err) {
          logger.log(err);
 
          });
+         */
          //Uncommented the above block on 6/12
         //changed ./addresses to address-list.json, file loaded into console
         //but page still uses address-list.js
@@ -70,9 +73,10 @@ class DataMaven extends Component {
         //Moved to after DataLoader section
 
         this.addressIndex = 0;
-        const address = addresses[this.addressIndex];
+        //const address = addresses[this.addressIndex];
+
         this.state = {
-            address: address
+            address: {firstName: "foo"}
         };
 
         this.quiet = true;
