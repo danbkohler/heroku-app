@@ -10,7 +10,7 @@ import AddressEdit from './AddressEdit';
 import App from './SmallNumbers';
 import ElfMenu from './ElfMenu';
 import ElfHeader from './ElfHeader';
-import addresses from '../address-list';
+//import addresses from '../address-list';
 import 'whatwg-fetch';
 import DataLoader from '../assets/DataLoader';
 const dataLoader = new DataLoader();
@@ -37,6 +37,7 @@ class DataMaven extends Component {
             }
             that.addressCount = addressCount;
         });
+
          //Adding for http://www.ccalvert.net/books/CloudNotes/Assignments/Browser/LearnLocalStorage.html#load-json
          fetch('./address-list.json').then(function(data) {
          const addresses = data.json();
@@ -46,8 +47,10 @@ class DataMaven extends Component {
          console.log(JSON.stringify(data, null, 4));
          that.addresses = data;
          that.setLocalStorage();
+
          }).catch(function (err) {
          logger.log(err);
+
          });
          //Uncommented the above block on 6/12
         //changed ./addresses to address-list.json, file loaded into console
@@ -65,13 +68,15 @@ class DataMaven extends Component {
         });
         */
         //Moved to after DataLoader section
+
         this.addressIndex = 0;
         const address = addresses[this.addressIndex];
         this.state = {
             address: address
         };
+
         this.quiet = true;
-    }
+    }//end Constructor
 
     /*
     onAddressChange(event) {
