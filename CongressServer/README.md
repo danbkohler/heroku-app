@@ -1,2 +1,0 @@
-# CongressServer
-by Charlie Calvert
