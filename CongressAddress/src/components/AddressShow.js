@@ -28,10 +28,10 @@ class AddressShow extends Component {
                 <div id='AddressShowDiv' className='row'>
                     <div className='col-sm-12'>
                         <p className='elf-p'>Name: {this.props.address.firstName} {this.props.address.lastName} </p>
-                        <p className='elf-p'>>Address: {this.props.address.street}</p>
-                        <p className='elf-p'>>City/State/Zip: {this.props.address.city} {this.props.address.usState} {this.props.address.zip}</p>
-                        <p className='elf-p'>>Phone: {this.props.address.phone}</p>
-                        <p className='elf-p'>>Website: {this.props.address.website}</p>
+                        <p className='elf-p'>Address: {this.props.address.street}</p>
+                        <p className='elf-p'>City/State/Zip: {this.props.address.city} {this.props.address.usState} {this.props.address.zip}</p>
+                        <p className='elf-p'>Phone: {this.props.address.phone}</p>
+                        <p className='elf-p'>Website: {this.props.address.website}</p>
                     </div>
                     <Button
                         bsStyle='primary'
